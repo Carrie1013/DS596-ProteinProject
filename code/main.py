@@ -94,6 +94,7 @@ class Split:
     def eval(self, df_test):
         
         required_columns = ['Site', 'Sequence', 'Secondary', 'Stability Sum']
+        # required_columns = ['Site', 'Sequence', 'Secondary']
         for col in required_columns:
             if col not in df_test.columns:
                 raise KeyError(f"Test dataset must contain the column '{col}'.")
